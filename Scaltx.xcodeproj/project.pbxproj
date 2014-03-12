@@ -21,6 +21,14 @@
 		AB30536018C925D80018B808 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30534218C925D70018B808 /* UIKit.framework */; };
 		AB30536818C925D80018B808 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB30536618C925D80018B808 /* InfoPlist.strings */; };
 		AB30536A18C925D80018B808 /* ScaltxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30536918C925D80018B808 /* ScaltxTests.m */; };
+		AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537418C9263E0018B808 /* greencar@2x.png */; };
+		AB30537D18C9263F0018B808 /* instructions-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537518C9263E0018B808 /* instructions-568h@2x.png */; };
+		AB30537E18C9263F0018B808 /* instructions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537618C9263E0018B808 /* instructions@2x.png */; };
+		AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537718C9263E0018B808 /* splash-568h@2x.png */; };
+		AB30538018C9263F0018B808 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537818C9263E0018B808 /* splash@2x.png */; };
+		AB30538118C9263F0018B808 /* track.xcf in Resources */ = {isa = PBXBuildFile; fileRef = AB30537918C9263F0018B808 /* track.xcf */; };
+		AB30538218C9263F0018B808 /* track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537A18C9263F0018B808 /* track@2x.png */; };
+		AB30538318C9263F0018B808 /* yellowcar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537B18C9263F0018B808 /* yellowcar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		AB30536518C925D80018B808 /* ScaltxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScaltxTests-Info.plist"; sourceTree = "<group>"; };
 		AB30536718C925D80018B808 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB30536918C925D80018B808 /* ScaltxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaltxTests.m; sourceTree = "<group>"; };
+		AB30537418C9263E0018B808 /* greencar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greencar@2x.png"; sourceTree = "<group>"; };
+		AB30537518C9263E0018B808 /* instructions-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-568h@2x.png"; sourceTree = "<group>"; };
+		AB30537618C9263E0018B808 /* instructions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions@2x.png"; sourceTree = "<group>"; };
+		AB30537718C9263E0018B808 /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
+		AB30537818C9263E0018B808 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		AB30537918C9263F0018B808 /* track.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = track.xcf; sourceTree = "<group>"; };
+		AB30537A18C9263F0018B808 /* track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track@2x.png"; sourceTree = "<group>"; };
+		AB30537B18C9263F0018B808 /* yellowcar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowcar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 		AB30534418C925D80018B808 /* Scaltx */ = {
 			isa = PBXGroup;
 			children = (
+				AB30537318C9261C0018B808 /* Graphics */,
 				AB30534D18C925D80018B808 /* SXAppDelegate.h */,
 				AB30534E18C925D80018B808 /* SXAppDelegate.m */,
 				AB30535018C925D80018B808 /* Main.storyboard */,
@@ -150,6 +167,21 @@
 				AB30536618C925D80018B808 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB30537318C9261C0018B808 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				AB30537418C9263E0018B808 /* greencar@2x.png */,
+				AB30537518C9263E0018B808 /* instructions-568h@2x.png */,
+				AB30537618C9263E0018B808 /* instructions@2x.png */,
+				AB30537718C9263E0018B808 /* splash-568h@2x.png */,
+				AB30537818C9263E0018B808 /* splash@2x.png */,
+				AB30537918C9263F0018B808 /* track.xcf */,
+				AB30537A18C9263F0018B808 /* track@2x.png */,
+				AB30537B18C9263F0018B808 /* yellowcar@2x.png */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +261,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */,
 				AB30535718C925D80018B808 /* Images.xcassets in Resources */,
 				AB30534918C925D80018B808 /* InfoPlist.strings in Resources */,
 				AB30535218C925D80018B808 /* Main.storyboard in Resources */,
+				AB30537E18C9263F0018B808 /* instructions@2x.png in Resources */,
+				AB30538018C9263F0018B808 /* splash@2x.png in Resources */,
+				AB30538218C9263F0018B808 /* track@2x.png in Resources */,
+				AB30537D18C9263F0018B808 /* instructions-568h@2x.png in Resources */,
+				AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */,
+				AB30538118C9263F0018B808 /* track.xcf in Resources */,
+				AB30538318C9263F0018B808 /* yellowcar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
