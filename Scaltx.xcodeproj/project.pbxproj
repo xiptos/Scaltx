@@ -16,9 +16,6 @@
 		AB30534F18C925D80018B808 /* SXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30534E18C925D80018B808 /* SXAppDelegate.m */; };
 		AB30535518C925D80018B808 /* SXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30535418C925D80018B808 /* SXViewController.m */; };
 		AB30535718C925D80018B808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB30535618C925D80018B808 /* Images.xcassets */; };
-		AB30535E18C925D80018B808 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30535D18C925D80018B808 /* XCTest.framework */; };
-		AB30535F18C925D80018B808 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30533E18C925D70018B808 /* Foundation.framework */; };
-		AB30536018C925D80018B808 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30534218C925D70018B808 /* UIKit.framework */; };
 		AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537418C9263E0018B808 /* greencar@2x.png */; };
 		AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537718C9263E0018B808 /* splash-568h@2x.png */; };
 		AB30538018C9263F0018B808 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537818C9263E0018B808 /* splash@2x.png */; };
@@ -35,16 +32,6 @@
 		ABCBAC5918D5F19D00A9BFEF /* scaltx_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCBAC5818D5F19D00A9BFEF /* scaltx_settings@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AB30536118C925D80018B808 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB30533318C925D70018B808 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB30533A18C925D70018B808;
-			remoteInfo = Scaltx;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		AB043CFC18D3A49900666E59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AB30533B18C925D70018B808 /* Scaltx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaltx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +47,6 @@
 		AB30535318C925D80018B808 /* SXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXViewController.h; sourceTree = "<group>"; };
 		AB30535418C925D80018B808 /* SXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXViewController.m; sourceTree = "<group>"; };
 		AB30535618C925D80018B808 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AB30535C18C925D80018B808 /* ScaltxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScaltxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB30535D18C925D80018B808 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AB30537418C9263E0018B808 /* greencar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greencar@2x.png"; sourceTree = "<group>"; };
 		AB30537718C9263E0018B808 /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
@@ -95,16 +81,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB30535918C925D80018B808 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB30535E18C925D80018B808 /* XCTest.framework in Frameworks */,
-				AB30536018C925D80018B808 /* UIKit.framework in Frameworks */,
-				AB30535F18C925D80018B808 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				AB30533B18C925D70018B808 /* Scaltx.app */,
-				AB30535C18C925D80018B808 /* ScaltxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,24 +192,6 @@
 			productReference = AB30533B18C925D70018B808 /* Scaltx.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AB30535B18C925D80018B808 /* ScaltxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB30537018C925D80018B808 /* Build configuration list for PBXNativeTarget "ScaltxTests" */;
-			buildPhases = (
-				AB30535818C925D80018B808 /* Sources */,
-				AB30535918C925D80018B808 /* Frameworks */,
-				AB30535A18C925D80018B808 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB30536218C925D80018B808 /* PBXTargetDependency */,
-			);
-			name = ScaltxTests;
-			productName = ScaltxTests;
-			productReference = AB30535C18C925D80018B808 /* ScaltxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,11 +201,6 @@
 				CLASSPREFIX = SX;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rui Lopes";
-				TargetAttributes = {
-					AB30535B18C925D80018B808 = {
-						TestTargetID = AB30533A18C925D70018B808;
-					};
-				};
 			};
 			buildConfigurationList = AB30533618C925D70018B808 /* Build configuration list for PBXProject "Scaltx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -264,7 +216,6 @@
 			projectRoot = "";
 			targets = (
 				AB30533A18C925D70018B808 /* Scaltx */,
-				AB30535B18C925D80018B808 /* ScaltxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +239,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB30535A18C925D80018B808 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -313,22 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB30535818C925D80018B808 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AB30536218C925D80018B808 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB30533A18C925D70018B808 /* Scaltx */;
-			targetProxy = AB30536118C925D80018B808 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AB30534718C925D80018B808 /* InfoPlist.strings */ = {
@@ -438,46 +367,6 @@
 			};
 			name = Release;
 		};
-		AB30537118C925D80018B808 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scaltx.app/Scaltx";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Scaltx/Scaltx-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ScaltxTests/ScaltxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		AB30537218C925D80018B808 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scaltx.app/Scaltx";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Scaltx/Scaltx-Prefix.pch";
-				INFOPLIST_FILE = "ScaltxTests/ScaltxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,15 +384,6 @@
 			buildConfigurations = (
 				AB30536E18C925D80018B808 /* Debug */,
 				AB30536F18C925D80018B808 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB30537018C925D80018B808 /* Build configuration list for PBXNativeTarget "ScaltxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB30537118C925D80018B808 /* Debug */,
-				AB30537218C925D80018B808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
