@@ -10,6 +10,7 @@
 
 @implementation SXTrackLine
 
+#pragma mark init
 -(id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint
 {
     self = [super init];
@@ -26,29 +27,7 @@
     return line;
 }
 
--(double)sin
-{
-    double s = (self.endPoint.y - self.startPoint.y)/sqrt(pow(self.endPoint.y-self.startPoint.y, 2) + pow(self.endPoint.x - self.startPoint.x, 2));
-    return s;
-}
-
--(double)cos
-{
-    double s = (self.endPoint.x - self.startPoint.x)/sqrt(pow(self.endPoint.y-self.startPoint.y, 2) + pow(self.endPoint.x - self.startPoint.x, 2));
-    return s;
-}
-
--(CGPoint)coordinatesWithLength:(double)length
-{
-    CGPoint p = CGPointMake(length * self.cos, length * self.sin);
-    return p;
-}
-
--(double)length
-{
-    return sqrt(pow(self.endPoint.x-self.startPoint.x, 2) + pow(self.endPoint.y - self.startPoint.y, 2));
-}
-
+#pragma mark breadcrumbs
 -(NSArray*)pointsSpaced:(double)space
 {
     NSMutableArray* array = [NSMutableArray array];
@@ -62,5 +41,11 @@
 
     return array;
 }
+
+-(double)length
+{
+    return sqrt(pow(self.endPoint.x-self.startPoint.x, 2) + pow(self.endPoint.y - self.startPoint.y, 2));
+}
+
 
 @end

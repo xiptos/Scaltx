@@ -47,6 +47,14 @@
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark game logic
+
 -(void)gameLoop
 {
     double currentTime = CACurrentMediaTime();
@@ -66,60 +74,12 @@
     
     [track1View moveCarOnPath:path1 angle:angle1 duration:1];
     [track2View moveCarOnPath:path2 angle:angle2 duration:1];
-    
-//    [track1View moveCarOnPath:path duration:duration];
- /*
-    //    [CATransaction setAnimationDuration:1];
-    for(int i=0;i<9;i++) {
-        if(_boardPositions[i].contents!= (id)[[self imageForPosition:i] CGImage])
-        {
-            //            _boardPositions[i].bounds=CGRectMake(0, 0, _boardPositions[i].bounds.size.width*1.1,
-            //                                                 _boardPositions[i].bounds.size.height*1.1);
-            _boardPositions[i].contents= (id)[[self imageForPosition:i] CGImage];
-            
-            CAKeyframeAnimation* scaleAnimation= [CAKeyframeAnimation animationWithKeyPath:@"transform"];
-            scaleAnimation.duration=.5;
-            scaleAnimation.values=[NSArray arrayWithObjects:
-                                   [NSValue valueWithCATransform3D:CATransform3DIdentity],
-                                   [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.1, 1.1,0)],
-                                   [NSValue valueWithCATransform3D:CATransform3DIdentity ],
-                                   nil];
-            [_boardPositions[i] addAnimation:scaleAnimation forKey:@"scaleAnimation"];
-            [[IGDSoundManager sharedInstance] playMove];
-        }
-    }
-    
-    int winner = [_board checkForVictory];
-    
-    if(winner!=0) {
-        UIAlertView* alert;
-        if(winner==1) {
-            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"You won!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [[IGDSoundManager sharedInstance] playEnd:0];
-            
-        } else if(winner==2) {
-            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"You lost!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [[IGDSoundManager sharedInstance] playEnd:1];
-        } else {
-            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"Draw!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [[IGDSoundManager sharedInstance] playEnd:2];
-        }
-        _displayLink.paused = YES;
-        [alert show];
-        [[IGDSoundManager sharedInstance] stop];
-    }
-    _resetButton.hidden = [_board checkForVictory]==0;
-    _levelLabel.text = [NSString stringWithFormat:@"%d", _board.level];
-    _timeLabel.text = [NSString stringWithFormat:@"%d", _board.time];
-  */
+
+    // Check for victory...
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark user input
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {

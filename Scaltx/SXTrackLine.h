@@ -17,12 +17,6 @@
 
 +(SXTrackLine*)lineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
 
--(double)sin;
--(double)cos;
--(double)length;
-
--(CGPoint)coordinatesWithLength:(double)length;
-
 -(NSArray*)pointsSpaced:(double)space;
 
 @end

@@ -13,6 +13,8 @@
     SXTrack* track;
 }
 
+#pragma mark init
+
 - (id)initWithFrame:(CGRect)frame track:(SXTrack*)t
 {
     self = [super initWithFrame:frame];
@@ -37,6 +39,24 @@
     return self;
 }
 
+#pragma mark motion
+
+- (void) moveCarOnPath:(CGPathRef)path angle:(double)angle duration:(double)duration
+{
+    [self.carLayer removeAllAnimations];
+    
+    self.carLayer.hidden = NO;
+    
+    self.carLayer.transform = CATransform3DMakeRotation(angle, 0.0, 0.0, 1.0);
+    
+    CAKeyframeAnimation *carAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    carAnimation.duration = duration;
+    carAnimation.path = path;
+    carAnimation.calculationMode = kCAAnimationPaced;
+    [self.carLayer addAnimation:carAnimation forKey:@"position"];
+}
+
+#pragma mark debug layout
 //- (void)drawRect:(CGRect)rect {
 //    NSLog(@"Draw rect");
 //    CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -56,30 +76,5 @@
 //    }];
 //}
 
-- (void) moveCarOnPath:(CGPathRef)path angle:(double)angle duration:(double)duration
-{
-    [self.carLayer removeAllAnimations];
-    
-    self.carLayer.hidden = NO;
-    
-    self.carLayer.transform = CATransform3DMakeRotation(angle, 0.0, 0.0, 1.0);
-    
-    CAKeyframeAnimation *carAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    carAnimation.duration = duration;
-    carAnimation.path = path;
-    carAnimation.calculationMode = kCAAnimationPaced;
-    carAnimation.delegate = self;
-    [self.carLayer addAnimation:carAnimation forKey:@"position"];
-}
 
-#pragma mark animation delegate methods
-- (void)animationWillStart:(NSString *)animationID context:(void *)context
-{
-    
-}
-
-- (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
-{
-    
-}
 @end

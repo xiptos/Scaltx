@@ -10,6 +10,7 @@
 
 @implementation SXSanMarino
 
+#pragma mark init
 -(id)init
 {
     self = [super init];
@@ -32,6 +33,7 @@
     return _sharedInstance;
 }
 
+#pragma mark setup tracks
 -(void)setupTracks
 {
     _track1 = [[SXTrack alloc] initWithPoint:CGPointMake(260, 150) carName:@"greencar" carAngle:3*M_PI_2];

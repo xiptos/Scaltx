@@ -10,6 +10,7 @@
 
 @implementation SXTrackArc
 
+#pragma mark properties
 -(CGPoint)startPoint
 {
     CGPoint startPoint = CGPointMake(self.center.x+self.radius*cos(self.startAngle), self.center.y+self.radius*sin(self.startAngle));
@@ -23,6 +24,7 @@
     
 }
 
+#pragma mark init
 -(id)initWithCenter:(CGPoint)center radius:(double)radius startAngle:(double)startAngle endAngle:(double)endAngle clockwise:(bool)clockwise
 {
     self = [super init];
@@ -36,25 +38,13 @@
     return self;
 }
 
--(double)normalizeAngle:(double)angle
-{
-    double newAngle = angle;
-    while (newAngle <= -M_PI) newAngle += 2*M_PI;
-    while (newAngle > M_PI) newAngle -= 2*M_PI;
-    return newAngle;
-}
-
 +(SXTrackArc*)arcWithCenter:(CGPoint)center radius:(double)radius startAngle:(double)startAngle endAngle:(double)endAngle clockwise:(bool)clockwise
 {
     SXTrackArc* arc = [[SXTrackArc alloc] initWithCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:clockwise];
     return arc;
 }
 
--(double)lengthAngle
-{
-    return self.endAngle - self.startAngle;
-}
-
+#pragma mark breadcrumbs
 -(NSArray*)pointsSpaced:(double)space
 {
     NSMutableArray* array = [NSMutableArray array];
@@ -74,5 +64,15 @@
 
     return array;
 }
+
+-(double)normalizeAngle:(double)angle
+{
+    double newAngle = angle;
+    while (newAngle <= -M_PI) newAngle += 2*M_PI;
+    while (newAngle > M_PI) newAngle -= 2*M_PI;
+    return newAngle;
+}
+
+
 
 @end

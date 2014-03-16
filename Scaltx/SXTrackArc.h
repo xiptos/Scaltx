@@ -23,6 +23,5 @@
 +(SXTrackArc*)arcWithCenter:(CGPoint)center radius:(double)radius startAngle:(double)startAngle endAngle:(double)endAngle clockwise:(bool)clockwise;
 
 -(NSArray*)pointsSpaced:(double)space;
--(double)lengthAngle;
 
 @end
