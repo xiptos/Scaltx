@@ -7,22 +7,113 @@
 //
 
 #import "SXViewController.h"
+#import "SXTrack.h"
+#import "SXTrackView.h"
+#import "SXSanMarino.h"
 
 @interface SXViewController ()
 
 @end
 
 @implementation SXViewController {
-    double speed1;
-    double previousTime;
-    double previousPosition;
+    CADisplayLink* _displayLink;
+    
+    SXTrackView* track1View;
+    SXTrackView* track2View;
+
+    float previousPosition1;
+    float previousPosition2;
+    
+    double deltaS1;
+    double deltaS2;
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[SXSanMarino sharedInstance].trackName]];
+
+    [self.view addSubview:imageView];
+
+    track1View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[SXSanMarino sharedInstance].track1];
+    [self.view addSubview:track1View];
+    track2View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[SXSanMarino sharedInstance].track2];
+    [self.view addSubview:track2View];
+    
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
+    
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
+
+-(void)gameLoop
+{
+    double currentTime = CACurrentMediaTime();
+    [[SXSanMarino sharedInstance].track1 update:currentTime deltaS:deltaS1];
+    [[SXSanMarino sharedInstance].track2 update:currentTime deltaS:deltaS2];
+    [self updateTrack];
+}
+
+
+-(void)updateTrack
+{
+    
+    CGPathRef path1 = [SXSanMarino sharedInstance].track1.motionPath;
+    double angle1 = [SXSanMarino sharedInstance].track1.carAngle;
+    CGPathRef path2 = [SXSanMarino sharedInstance].track2.motionPath;
+    double angle2 = [SXSanMarino sharedInstance].track2.carAngle;
+    
+    [track1View moveCarOnPath:path1 angle:angle1 duration:1];
+    [track2View moveCarOnPath:path2 angle:angle2 duration:1];
+    
+//    [track1View moveCarOnPath:path duration:duration];
+ /*
+    //    [CATransaction setAnimationDuration:1];
+    for(int i=0;i<9;i++) {
+        if(_boardPositions[i].contents!= (id)[[self imageForPosition:i] CGImage])
+        {
+            //            _boardPositions[i].bounds=CGRectMake(0, 0, _boardPositions[i].bounds.size.width*1.1,
+            //                                                 _boardPositions[i].bounds.size.height*1.1);
+            _boardPositions[i].contents= (id)[[self imageForPosition:i] CGImage];
+            
+            CAKeyframeAnimation* scaleAnimation= [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+            scaleAnimation.duration=.5;
+            scaleAnimation.values=[NSArray arrayWithObjects:
+                                   [NSValue valueWithCATransform3D:CATransform3DIdentity],
+                                   [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.1, 1.1,0)],
+                                   [NSValue valueWithCATransform3D:CATransform3DIdentity ],
+                                   nil];
+            [_boardPositions[i] addAnimation:scaleAnimation forKey:@"scaleAnimation"];
+            [[IGDSoundManager sharedInstance] playMove];
+        }
+    }
+    
+    int winner = [_board checkForVictory];
+    
+    if(winner!=0) {
+        UIAlertView* alert;
+        if(winner==1) {
+            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"You won!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [[IGDSoundManager sharedInstance] playEnd:0];
+            
+        } else if(winner==2) {
+            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"You lost!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [[IGDSoundManager sharedInstance] playEnd:1];
+        } else {
+            alert = [[UIAlertView alloc] initWithTitle:@"Tic Tac Tower" message:@"Draw!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [[IGDSoundManager sharedInstance] playEnd:2];
+        }
+        _displayLink.paused = YES;
+        [alert show];
+        [[IGDSoundManager sharedInstance] stop];
+    }
+    _resetButton.hidden = [_board checkForVictory]==0;
+    _levelLabel.text = [NSString stringWithFormat:@"%d", _board.level];
+    _timeLabel.text = [NSString stringWithFormat:@"%d", _board.time];
+  */
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -31,47 +122,64 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch * touch=[touches anyObject];
-    CGPoint touchPosition=[touch locationInView:self.view];
-    speed1 = 0;
-    previousTime = CACurrentMediaTime();
-    previousPosition = touchPosition.x;
-    
-    NSLog(@"TouchesBegan: %f,%f",touchPosition.x, touchPosition.y);
-//    for(int i=0;i<9;i++) {
-//        if(CGRectContainsPoint(_boardPositions[i].frame, touchPosition)) {
-//            [_board playForPosition:i];
-//            [self updateBoard];
-//        }
-//    }
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        UITouch * touch = obj;
+
+        CGPoint touchPosition=[touch locationInView:self.view];
+        
+        if(touchPosition.y<150) {
+            previousPosition1 = touchPosition.x;
+        } else if(touchPosition.y>330) {
+            previousPosition2 = touchPosition.x;
+        }
+        
+    }];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch * touch=[touches anyObject];
-    CGPoint touchPosition=[touch locationInView:self.view];
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        UITouch * touch = obj;
+        
+        CGPoint touchPosition=[touch locationInView:self.view];
     
-    double currentTime = CACurrentMediaTime();
-    double currentPosition = touchPosition.x;
-    
-    speed1 = (currentPosition - previousPosition) / (currentTime - previousTime);
-    
-    previousPosition = currentPosition;
-    previousTime = currentTime;
-    NSLog(@"Speed: %f",speed1);
-    
+        if(touchPosition.y<150) {
+            deltaS1 = previousPosition1 - touchPosition.x;
+            previousPosition1 = touchPosition.x;
+
+        } else if(touchPosition.y>330) {
+            deltaS2 = touchPosition.x - previousPosition2;
+            previousPosition2 = touchPosition.x;
+
+        }
+    }];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch * touch=[touches anyObject];
-    CGPoint touchPosition=[touch locationInView:self.view];
-    NSLog(@"TouchesEnded: %f,%f",touchPosition.x, touchPosition.y);
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        UITouch * touch = obj;
+        
+        CGPoint touchPosition=[touch locationInView:self.view];
+        if(touchPosition.y<150) {
+            deltaS1 = 0;
+        } else if(touchPosition.y>330) {
+            deltaS2 = 0;
+        }
+    }];
     
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch * touch=[touches anyObject];
-    CGPoint touchPosition=[touch locationInView:self.view];
-    NSLog(@"TouchesCancelled: %f,%f",touchPosition.x, touchPosition.y);
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        UITouch * touch = obj;
+        
+        CGPoint touchPosition=[touch locationInView:self.view];
+        if(touchPosition.y<150) {
+            deltaS1 = 0;
+        } else if(touchPosition.y>330) {
+            deltaS2 = 0;
+        }
+    }];
+    
     
 }
 

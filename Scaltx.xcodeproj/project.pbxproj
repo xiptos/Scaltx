@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB043CFD18D3A49900666E59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB043CFC18D3A49900666E59 /* QuartzCore.framework */; };
 		AB30533F18C925D70018B808 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30533E18C925D70018B808 /* Foundation.framework */; };
 		AB30534118C925D70018B808 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30534018C925D70018B808 /* CoreGraphics.framework */; };
 		AB30534318C925D70018B808 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30534218C925D70018B808 /* UIKit.framework */; };
@@ -22,13 +23,19 @@
 		AB30536818C925D80018B808 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB30536618C925D80018B808 /* InfoPlist.strings */; };
 		AB30536A18C925D80018B808 /* ScaltxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30536918C925D80018B808 /* ScaltxTests.m */; };
 		AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537418C9263E0018B808 /* greencar@2x.png */; };
-		AB30537D18C9263F0018B808 /* instructions-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537518C9263E0018B808 /* instructions-568h@2x.png */; };
-		AB30537E18C9263F0018B808 /* instructions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537618C9263E0018B808 /* instructions@2x.png */; };
 		AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537718C9263E0018B808 /* splash-568h@2x.png */; };
 		AB30538018C9263F0018B808 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537818C9263E0018B808 /* splash@2x.png */; };
 		AB30538118C9263F0018B808 /* track.xcf in Resources */ = {isa = PBXBuildFile; fileRef = AB30537918C9263F0018B808 /* track.xcf */; };
 		AB30538218C9263F0018B808 /* track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537A18C9263F0018B808 /* track@2x.png */; };
 		AB30538318C9263F0018B808 /* yellowcar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537B18C9263F0018B808 /* yellowcar@2x.png */; };
+		ABC8C95E18D321090034151F /* SXTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC8C95D18D321090034151F /* SXTrack.m */; };
+		ABC8C96418D352B00034151F /* SXTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC8C96318D352B00034151F /* SXTrackView.m */; };
+		ABCBAC4D18D44C9F00A9BFEF /* SXTrackArc.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCBAC4C18D44C9F00A9BFEF /* SXTrackArc.m */; };
+		ABCBAC5018D44D0600A9BFEF /* SXTrackLine.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCBAC4F18D44D0600A9BFEF /* SXTrackLine.m */; };
+		ABCBAC5318D45A9400A9BFEF /* SXSanMarino.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCBAC5218D45A9400A9BFEF /* SXSanMarino.m */; };
+		ABCBAC5518D5F0BF00A9BFEF /* scaltx_spot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCBAC5418D5F0BF00A9BFEF /* scaltx_spot@2x.png */; };
+		ABCBAC5718D5F0C700A9BFEF /* scaltx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCBAC5618D5F0C700A9BFEF /* scaltx@2x.png */; };
+		ABCBAC5918D5F19D00A9BFEF /* scaltx_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCBAC5818D5F19D00A9BFEF /* scaltx_settings@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB043CFC18D3A49900666E59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AB30533B18C925D70018B808 /* Scaltx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scaltx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB30533E18C925D70018B808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB30534018C925D70018B808 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,13 +70,24 @@
 		AB30536718C925D80018B808 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB30536918C925D80018B808 /* ScaltxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaltxTests.m; sourceTree = "<group>"; };
 		AB30537418C9263E0018B808 /* greencar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greencar@2x.png"; sourceTree = "<group>"; };
-		AB30537518C9263E0018B808 /* instructions-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions-568h@2x.png"; sourceTree = "<group>"; };
-		AB30537618C9263E0018B808 /* instructions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instructions@2x.png"; sourceTree = "<group>"; };
 		AB30537718C9263E0018B808 /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
 		AB30537818C9263E0018B808 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		AB30537918C9263F0018B808 /* track.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = track.xcf; sourceTree = "<group>"; };
 		AB30537A18C9263F0018B808 /* track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track@2x.png"; sourceTree = "<group>"; };
 		AB30537B18C9263F0018B808 /* yellowcar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowcar@2x.png"; sourceTree = "<group>"; };
+		ABC8C95C18D321090034151F /* SXTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrack.h; sourceTree = "<group>"; };
+		ABC8C95D18D321090034151F /* SXTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTrack.m; sourceTree = "<group>"; };
+		ABC8C96218D352B00034151F /* SXTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrackView.h; sourceTree = "<group>"; };
+		ABC8C96318D352B00034151F /* SXTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTrackView.m; sourceTree = "<group>"; };
+		ABCBAC4B18D44C9F00A9BFEF /* SXTrackArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrackArc.h; sourceTree = "<group>"; };
+		ABCBAC4C18D44C9F00A9BFEF /* SXTrackArc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTrackArc.m; sourceTree = "<group>"; };
+		ABCBAC4E18D44D0600A9BFEF /* SXTrackLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrackLine.h; sourceTree = "<group>"; };
+		ABCBAC4F18D44D0600A9BFEF /* SXTrackLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTrackLine.m; sourceTree = "<group>"; };
+		ABCBAC5118D45A9400A9BFEF /* SXSanMarino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXSanMarino.h; sourceTree = "<group>"; };
+		ABCBAC5218D45A9400A9BFEF /* SXSanMarino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXSanMarino.m; sourceTree = "<group>"; };
+		ABCBAC5418D5F0BF00A9BFEF /* scaltx_spot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scaltx_spot@2x.png"; sourceTree = "<group>"; };
+		ABCBAC5618D5F0C700A9BFEF /* scaltx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scaltx@2x.png"; sourceTree = "<group>"; };
+		ABCBAC5818D5F19D00A9BFEF /* scaltx_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scaltx_settings@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB043CFD18D3A49900666E59 /* QuartzCore.framework in Frameworks */,
 				AB30534118C925D70018B808 /* CoreGraphics.framework in Frameworks */,
 				AB30534318C925D70018B808 /* UIKit.framework in Frameworks */,
 				AB30533F18C925D70018B808 /* Foundation.framework in Frameworks */,
@@ -117,6 +137,7 @@
 		AB30533D18C925D70018B808 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB043CFC18D3A49900666E59 /* QuartzCore.framework */,
 				AB30533E18C925D70018B808 /* Foundation.framework */,
 				AB30534018C925D70018B808 /* CoreGraphics.framework */,
 				AB30534218C925D70018B808 /* UIKit.framework */,
@@ -128,6 +149,7 @@
 		AB30534418C925D80018B808 /* Scaltx */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8C95B18D320ED0034151F /* Model */,
 				AB30537318C9261C0018B808 /* Graphics */,
 				AB30534D18C925D80018B808 /* SXAppDelegate.h */,
 				AB30534E18C925D80018B808 /* SXAppDelegate.m */,
@@ -136,6 +158,10 @@
 				AB30535418C925D80018B808 /* SXViewController.m */,
 				AB30535618C925D80018B808 /* Images.xcassets */,
 				AB30534518C925D80018B808 /* Supporting Files */,
+				ABC8C96218D352B00034151F /* SXTrackView.h */,
+				ABC8C96318D352B00034151F /* SXTrackView.m */,
+				ABCBAC5118D45A9400A9BFEF /* SXSanMarino.h */,
+				ABCBAC5218D45A9400A9BFEF /* SXSanMarino.m */,
 			);
 			path = Scaltx;
 			sourceTree = "<group>";
@@ -172,16 +198,30 @@
 		AB30537318C9261C0018B808 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				ABCBAC5818D5F19D00A9BFEF /* scaltx_settings@2x.png */,
 				AB30537418C9263E0018B808 /* greencar@2x.png */,
-				AB30537518C9263E0018B808 /* instructions-568h@2x.png */,
-				AB30537618C9263E0018B808 /* instructions@2x.png */,
 				AB30537718C9263E0018B808 /* splash-568h@2x.png */,
+				ABCBAC5618D5F0C700A9BFEF /* scaltx@2x.png */,
+				ABCBAC5418D5F0BF00A9BFEF /* scaltx_spot@2x.png */,
 				AB30537818C9263E0018B808 /* splash@2x.png */,
 				AB30537918C9263F0018B808 /* track.xcf */,
 				AB30537A18C9263F0018B808 /* track@2x.png */,
 				AB30537B18C9263F0018B808 /* yellowcar@2x.png */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		ABC8C95B18D320ED0034151F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABC8C95C18D321090034151F /* SXTrack.h */,
+				ABC8C95D18D321090034151F /* SXTrack.m */,
+				ABCBAC4B18D44C9F00A9BFEF /* SXTrackArc.h */,
+				ABCBAC4C18D44C9F00A9BFEF /* SXTrackArc.m */,
+				ABCBAC4E18D44D0600A9BFEF /* SXTrackLine.h */,
+				ABCBAC4F18D44D0600A9BFEF /* SXTrackLine.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +269,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SX;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rui Lopes";
 				TargetAttributes = {
 					AB30535B18C925D80018B808 = {
@@ -263,12 +303,13 @@
 			files = (
 				AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */,
 				AB30535718C925D80018B808 /* Images.xcassets in Resources */,
+				ABCBAC5918D5F19D00A9BFEF /* scaltx_settings@2x.png in Resources */,
+				ABCBAC5718D5F0C700A9BFEF /* scaltx@2x.png in Resources */,
 				AB30534918C925D80018B808 /* InfoPlist.strings in Resources */,
 				AB30535218C925D80018B808 /* Main.storyboard in Resources */,
-				AB30537E18C9263F0018B808 /* instructions@2x.png in Resources */,
 				AB30538018C9263F0018B808 /* splash@2x.png in Resources */,
+				ABCBAC5518D5F0BF00A9BFEF /* scaltx_spot@2x.png in Resources */,
 				AB30538218C9263F0018B808 /* track@2x.png in Resources */,
-				AB30537D18C9263F0018B808 /* instructions-568h@2x.png in Resources */,
 				AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */,
 				AB30538118C9263F0018B808 /* track.xcf in Resources */,
 				AB30538318C9263F0018B808 /* yellowcar@2x.png in Resources */,
@@ -290,8 +331,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC8C95E18D321090034151F /* SXTrack.m in Sources */,
+				ABCBAC5018D44D0600A9BFEF /* SXTrackLine.m in Sources */,
 				AB30535518C925D80018B808 /* SXViewController.m in Sources */,
+				ABCBAC5318D45A9400A9BFEF /* SXSanMarino.m in Sources */,
 				AB30534B18C925D80018B808 /* main.m in Sources */,
+				ABC8C96418D352B00034151F /* SXTrackView.m in Sources */,
+				ABCBAC4D18D44C9F00A9BFEF /* SXTrackArc.m in Sources */,
 				AB30534F18C925D80018B808 /* SXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +392,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -385,7 +430,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -443,7 +487,6 @@
 		AB30537118C925D80018B808 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scaltx.app/Scaltx";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -466,7 +509,6 @@
 		AB30537218C925D80018B808 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Scaltx.app/Scaltx";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -501,6 +543,7 @@
 				AB30536F18C925D80018B808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB30537018C925D80018B808 /* Build configuration list for PBXNativeTarget "ScaltxTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +552,7 @@
 				AB30537218C925D80018B808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
