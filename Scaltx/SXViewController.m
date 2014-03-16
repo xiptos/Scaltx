@@ -11,7 +11,7 @@
 #import "SXTrackView.h"
 #import "SXSanMarino.h"
 
-#define DELAY 10
+#define DELAY 100
 
 @interface SXViewController ()
 

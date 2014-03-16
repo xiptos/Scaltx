@@ -7,12 +7,19 @@
 //
 
 #import "SXAppDelegate.h"
+#import "SXViewController.h"
 
-@implementation SXAppDelegate
+@implementation SXAppDelegate {
+    SXViewController* sxViewController;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    sxViewController = [[SXViewController alloc] init];
+    window.rootViewController = sxViewController;
+    [window makeKeyAndVisible];
+    
     return YES;
 }
 							

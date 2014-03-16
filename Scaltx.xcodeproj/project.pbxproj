@@ -14,14 +14,11 @@
 		AB30534918C925D80018B808 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB30534718C925D80018B808 /* InfoPlist.strings */; };
 		AB30534B18C925D80018B808 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30534A18C925D80018B808 /* main.m */; };
 		AB30534F18C925D80018B808 /* SXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30534E18C925D80018B808 /* SXAppDelegate.m */; };
-		AB30535218C925D80018B808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB30535018C925D80018B808 /* Main.storyboard */; };
 		AB30535518C925D80018B808 /* SXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30535418C925D80018B808 /* SXViewController.m */; };
 		AB30535718C925D80018B808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB30535618C925D80018B808 /* Images.xcassets */; };
 		AB30535E18C925D80018B808 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30535D18C925D80018B808 /* XCTest.framework */; };
 		AB30535F18C925D80018B808 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30533E18C925D70018B808 /* Foundation.framework */; };
 		AB30536018C925D80018B808 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB30534218C925D70018B808 /* UIKit.framework */; };
-		AB30536818C925D80018B808 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB30536618C925D80018B808 /* InfoPlist.strings */; };
-		AB30536A18C925D80018B808 /* ScaltxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30536918C925D80018B808 /* ScaltxTests.m */; };
 		AB30537C18C9263F0018B808 /* greencar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537418C9263E0018B808 /* greencar@2x.png */; };
 		AB30537F18C9263F0018B808 /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537718C9263E0018B808 /* splash-568h@2x.png */; };
 		AB30538018C9263F0018B808 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537818C9263E0018B808 /* splash@2x.png */; };
@@ -60,15 +57,11 @@
 		AB30534C18C925D80018B808 /* Scaltx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scaltx-Prefix.pch"; sourceTree = "<group>"; };
 		AB30534D18C925D80018B808 /* SXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXAppDelegate.h; sourceTree = "<group>"; };
 		AB30534E18C925D80018B808 /* SXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXAppDelegate.m; sourceTree = "<group>"; };
-		AB30535118C925D80018B808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB30535318C925D80018B808 /* SXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXViewController.h; sourceTree = "<group>"; };
 		AB30535418C925D80018B808 /* SXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXViewController.m; sourceTree = "<group>"; };
 		AB30535618C925D80018B808 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB30535C18C925D80018B808 /* ScaltxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScaltxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB30535D18C925D80018B808 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AB30536518C925D80018B808 /* ScaltxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScaltxTests-Info.plist"; sourceTree = "<group>"; };
-		AB30536718C925D80018B808 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AB30536918C925D80018B808 /* ScaltxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaltxTests.m; sourceTree = "<group>"; };
 		AB30537418C9263E0018B808 /* greencar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greencar@2x.png"; sourceTree = "<group>"; };
 		AB30537718C9263E0018B808 /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
 		AB30537818C9263E0018B808 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
@@ -119,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				AB30534418C925D80018B808 /* Scaltx */,
-				AB30536318C925D80018B808 /* ScaltxTests */,
 				AB30533D18C925D70018B808 /* Frameworks */,
 				AB30533C18C925D70018B808 /* Products */,
 			);
@@ -153,7 +145,6 @@
 				AB30537318C9261C0018B808 /* Graphics */,
 				AB30534D18C925D80018B808 /* SXAppDelegate.h */,
 				AB30534E18C925D80018B808 /* SXAppDelegate.m */,
-				AB30535018C925D80018B808 /* Main.storyboard */,
 				AB30535318C925D80018B808 /* SXViewController.h */,
 				AB30535418C925D80018B808 /* SXViewController.m */,
 				AB30535618C925D80018B808 /* Images.xcassets */,
@@ -173,24 +164,6 @@
 				AB30534718C925D80018B808 /* InfoPlist.strings */,
 				AB30534A18C925D80018B808 /* main.m */,
 				AB30534C18C925D80018B808 /* Scaltx-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AB30536318C925D80018B808 /* ScaltxTests */ = {
-			isa = PBXGroup;
-			children = (
-				AB30536918C925D80018B808 /* ScaltxTests.m */,
-				AB30536418C925D80018B808 /* Supporting Files */,
-			);
-			path = ScaltxTests;
-			sourceTree = "<group>";
-		};
-		AB30536418C925D80018B808 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AB30536518C925D80018B808 /* ScaltxTests-Info.plist */,
-				AB30536618C925D80018B808 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -306,7 +279,6 @@
 				ABCBAC5918D5F19D00A9BFEF /* scaltx_settings@2x.png in Resources */,
 				ABCBAC5718D5F0C700A9BFEF /* scaltx@2x.png in Resources */,
 				AB30534918C925D80018B808 /* InfoPlist.strings in Resources */,
-				AB30535218C925D80018B808 /* Main.storyboard in Resources */,
 				AB30538018C9263F0018B808 /* splash@2x.png in Resources */,
 				ABCBAC5518D5F0BF00A9BFEF /* scaltx_spot@2x.png in Resources */,
 				AB30538218C9263F0018B808 /* track@2x.png in Resources */,
@@ -320,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB30536818C925D80018B808 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB30536A18C925D80018B808 /* ScaltxTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,22 +335,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AB30534818C925D80018B808 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AB30535018C925D80018B808 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB30535118C925D80018B808 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AB30536618C925D80018B808 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB30536718C925D80018B808 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
