@@ -11,9 +11,12 @@
 #import "SXTrackView.h"
 #import "SXSanMarino.h"
 
+#define DELAY 10
+
 @interface SXViewController ()
 
 @end
+
 
 @implementation SXViewController {
     CADisplayLink* _displayLink;
@@ -103,11 +106,11 @@
         CGPoint touchPosition=[touch locationInView:self.view];
     
         if(touchPosition.y<150) {
-            deltaS1 = previousPosition1 - touchPosition.x;
+            deltaS1 = (previousPosition1 - touchPosition.x)/DELAY;
             previousPosition1 = touchPosition.x;
 
         } else if(touchPosition.y>330) {
-            deltaS2 = touchPosition.x - previousPosition2;
+            deltaS2 = (touchPosition.x - previousPosition2)/DELAY;
             previousPosition2 = touchPosition.x;
 
         }
