@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SXTrack.h"
 #import "SXRaceTrack.h"
 
 @interface SXSanMarino : NSObject <SXRaceTrack>

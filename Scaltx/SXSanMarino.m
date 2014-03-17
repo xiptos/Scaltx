@@ -7,6 +7,7 @@
 //
 
 #import "SXSanMarino.h"
+#import "SXTrack.h"
 
 @implementation SXSanMarino {
     NSArray* tracks;
