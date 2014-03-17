@@ -8,7 +8,11 @@
 
 #import "SXSanMarino.h"
 
-@implementation SXSanMarino
+@implementation SXSanMarino {
+    NSArray* tracks;
+}
+
+@synthesize trackName = _trackName;
 
 #pragma mark init
 -(id)init
@@ -21,22 +25,21 @@
     return self;
 }
 
-+ (SXSanMarino*)sharedInstance
+#pragma mark SXRaceTrack protocol
+-(int)numberOfTracks
 {
-    static SXSanMarino *_sharedInstance = nil;
-    
-    static dispatch_once_t oncePredicate;
-    
-    dispatch_once(&oncePredicate, ^{
-        _sharedInstance = [[SXSanMarino alloc] init];
-    });
-    return _sharedInstance;
+    return tracks.count;
+}
+
+-(SXTrack*)track:(int)index
+{
+    return [tracks objectAtIndex:index];
 }
 
 #pragma mark setup tracks
 -(void)setupTracks
 {
-    _track1 = [[SXTrack alloc] initWithPoint:CGPointMake(260, 150) carName:@"greencar" carAngle:3*M_PI_2];
+    SXTrack* _track1 = [[SXTrack alloc] initWithPoint:CGPointMake(260, 150) carName:@"greencar" carAngle:3*M_PI_2];
     [_track1 lineTo:CGPointMake(260, 123)];
     [_track1 arcWithCenter:CGPointMake(200, 123) radius:60 startAngle:0 endAngle:3*M_PI_2 clockwise:TRUE];
     [_track1 lineTo:CGPointMake(100, 62)];
@@ -54,8 +57,7 @@
     [_track1 lineTo:CGPointMake(260, 189)];
     [_track1 close];
     
-    
-    _track2 = [[SXTrack alloc] initWithPoint:CGPointMake(245, 150) carName:@"yellowcar" carAngle:3*M_PI_2];
+    SXTrack* _track2 = [[SXTrack alloc] initWithPoint:CGPointMake(245, 150) carName:@"yellowcar" carAngle:3*M_PI_2];
     [_track2 lineTo:CGPointMake(245, 123)];
     [_track2 arcWithCenter:CGPointMake(200, 123) radius:45 startAngle:0 endAngle:3*M_PI_2 clockwise:TRUE];
     [_track2 lineTo:CGPointMake(100, 77)];
@@ -73,5 +75,6 @@
     [_track2 lineTo:CGPointMake(245, 189)];
     [_track2 close];
 
+    tracks = [NSArray arrayWithObjects:_track1, _track2, nil];
 }
 @end

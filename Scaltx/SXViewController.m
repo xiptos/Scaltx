@@ -9,7 +9,8 @@
 #import "SXViewController.h"
 #import "SXTrack.h"
 #import "SXTrackView.h"
-#import "SXSanMarino.h"
+#import "SXRaceTrack.h"
+#import "SXRaceTrackFactory.h"
 
 #define DELAY 100
 
@@ -36,13 +37,15 @@
 {
     [super viewDidLoad];
     
-    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[SXSanMarino sharedInstance].trackName]];
+    id<SXRaceTrack> raceTrack = [[SXRaceTrackFactory sharedInstance] raceTrack:0];
+    
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:raceTrack.trackName]];
 
     [self.view addSubview:imageView];
 
-    track1View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[SXSanMarino sharedInstance].track1];
+    track1View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[raceTrack track:0]];
     [self.view addSubview:track1View];
-    track2View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[SXSanMarino sharedInstance].track2];
+    track2View = [[SXTrackView alloc] initWithFrame:self.view.frame track:[raceTrack track:1]];
     [self.view addSubview:track2View];
     
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
@@ -61,19 +64,22 @@
 -(void)gameLoop
 {
     double currentTime = CACurrentMediaTime();
-    [[SXSanMarino sharedInstance].track1 update:currentTime deltaS:deltaS1];
-    [[SXSanMarino sharedInstance].track2 update:currentTime deltaS:deltaS2];
+    
+    id<SXRaceTrack> raceTrack = [[SXRaceTrackFactory sharedInstance] raceTrack:0];
+    [[raceTrack track:0] update:currentTime deltaS:deltaS1];
+    [[raceTrack track:1] update:currentTime deltaS:deltaS2];
     [self updateTrack];
 }
 
 
 -(void)updateTrack
 {
-    
-    CGPathRef path1 = [SXSanMarino sharedInstance].track1.motionPath;
-    double angle1 = [SXSanMarino sharedInstance].track1.carAngle;
-    CGPathRef path2 = [SXSanMarino sharedInstance].track2.motionPath;
-    double angle2 = [SXSanMarino sharedInstance].track2.carAngle;
+    id<SXRaceTrack> raceTrack = [[SXRaceTrackFactory sharedInstance] raceTrack:0];
+
+    CGPathRef path1 = [raceTrack track:0].motionPath;
+    double angle1 = [raceTrack track:0].carAngle;
+    CGPathRef path2 = [raceTrack track:1].motionPath;
+    double angle2 = [raceTrack track:1].carAngle;
     
     [track1View moveCarOnPath:path1 angle:angle1 duration:1];
     [track2View moveCarOnPath:path2 angle:angle2 duration:1];

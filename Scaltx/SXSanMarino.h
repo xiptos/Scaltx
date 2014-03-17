@@ -8,14 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "SXTrack.h"
+#import "SXRaceTrack.h"
 
-@interface SXSanMarino : NSObject
-
-@property(nonatomic, readonly, strong) SXTrack* track1;
-@property(nonatomic, readonly, strong) SXTrack* track2;
-
-@property(nonatomic, readonly, strong) NSString* trackName;
-
-+ (SXSanMarino*)sharedInstance;
+@interface SXSanMarino : NSObject <SXRaceTrack>
 
 @end

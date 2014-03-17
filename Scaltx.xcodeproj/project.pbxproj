@@ -22,6 +22,7 @@
 		AB30538118C9263F0018B808 /* track.xcf in Resources */ = {isa = PBXBuildFile; fileRef = AB30537918C9263F0018B808 /* track.xcf */; };
 		AB30538218C9263F0018B808 /* track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537A18C9263F0018B808 /* track@2x.png */; };
 		AB30538318C9263F0018B808 /* yellowcar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB30537B18C9263F0018B808 /* yellowcar@2x.png */; };
+		AB8D03A418D762BE00AADFDE /* SXRaceTrackFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D03A318D762BE00AADFDE /* SXRaceTrackFactory.m */; };
 		ABC8C95E18D321090034151F /* SXTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC8C95D18D321090034151F /* SXTrack.m */; };
 		ABC8C96418D352B00034151F /* SXTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC8C96318D352B00034151F /* SXTrackView.m */; };
 		ABCBAC4D18D44C9F00A9BFEF /* SXTrackArc.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCBAC4C18D44C9F00A9BFEF /* SXTrackArc.m */; };
@@ -54,6 +55,9 @@
 		AB30537918C9263F0018B808 /* track.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = track.xcf; sourceTree = "<group>"; };
 		AB30537A18C9263F0018B808 /* track@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track@2x.png"; sourceTree = "<group>"; };
 		AB30537B18C9263F0018B808 /* yellowcar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowcar@2x.png"; sourceTree = "<group>"; };
+		AB8D03A118D7624400AADFDE /* SXRaceTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXRaceTrack.h; sourceTree = "<group>"; };
+		AB8D03A218D762BE00AADFDE /* SXRaceTrackFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXRaceTrackFactory.h; sourceTree = "<group>"; };
+		AB8D03A318D762BE00AADFDE /* SXRaceTrackFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXRaceTrackFactory.m; sourceTree = "<group>"; };
 		ABC8C95C18D321090034151F /* SXTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrack.h; sourceTree = "<group>"; };
 		ABC8C95D18D321090034151F /* SXTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTrack.m; sourceTree = "<group>"; };
 		ABC8C96218D352B00034151F /* SXTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTrackView.h; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		AB30534418C925D80018B808 /* Scaltx */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D03A018D7621B00AADFDE /* Tracks */,
 				ABC8C95B18D320ED0034151F /* Model */,
 				AB30537318C9261C0018B808 /* Graphics */,
 				AB30534D18C925D80018B808 /* SXAppDelegate.h */,
@@ -126,8 +131,6 @@
 				AB30534518C925D80018B808 /* Supporting Files */,
 				ABC8C96218D352B00034151F /* SXTrackView.h */,
 				ABC8C96318D352B00034151F /* SXTrackView.m */,
-				ABCBAC5118D45A9400A9BFEF /* SXSanMarino.h */,
-				ABCBAC5218D45A9400A9BFEF /* SXSanMarino.m */,
 			);
 			path = Scaltx;
 			sourceTree = "<group>";
@@ -157,6 +160,18 @@
 				AB30537B18C9263F0018B808 /* yellowcar@2x.png */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		AB8D03A018D7621B00AADFDE /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				ABCBAC5118D45A9400A9BFEF /* SXSanMarino.h */,
+				ABCBAC5218D45A9400A9BFEF /* SXSanMarino.m */,
+				AB8D03A118D7624400AADFDE /* SXRaceTrack.h */,
+				AB8D03A218D762BE00AADFDE /* SXRaceTrackFactory.h */,
+				AB8D03A318D762BE00AADFDE /* SXRaceTrackFactory.m */,
+			);
+			name = Tracks;
 			sourceTree = "<group>";
 		};
 		ABC8C95B18D320ED0034151F /* Model */ = {
@@ -251,6 +266,7 @@
 				AB30535518C925D80018B808 /* SXViewController.m in Sources */,
 				ABCBAC5318D45A9400A9BFEF /* SXSanMarino.m in Sources */,
 				AB30534B18C925D80018B808 /* main.m in Sources */,
+				AB8D03A418D762BE00AADFDE /* SXRaceTrackFactory.m in Sources */,
 				ABC8C96418D352B00034151F /* SXTrackView.m in Sources */,
 				ABCBAC4D18D44C9F00A9BFEF /* SXTrackArc.m in Sources */,
 				AB30534F18C925D80018B808 /* SXAppDelegate.m in Sources */,
