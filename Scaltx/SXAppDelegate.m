@@ -15,10 +15,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     sxViewController = [[SXViewController alloc] init];
-    window.rootViewController = sxViewController;
-    [window makeKeyAndVisible];
+    _window.rootViewController = sxViewController;
+    [_window makeKeyAndVisible];
     
     return YES;
 }
